@@ -1,0 +1,26 @@
+{
+"name": "aruan's extension",
+"version": "1.0",
+"manifest_version": 2, 
+"description": "The first extension that I made for my dear xinxintuo.",
+"browser_action": {
+	"default_icon": {
+		"24" : "cat.png"
+	}
+},
+"permissions": [
+    "*://*.douban.com/*"
+],
+"content_scripts": [
+	{
+		"matches": ["*://*.douban.com/*"],
+		"js": 
+		[
+			"js/common/jquery.min.js", 
+			"js/group/floor.js", //小组显示楼层
+			"js/radio/pageTurning.js", //广播自动翻页
+			"js/common/fastMove.js" //回顶部和回底部
+		]
+	}
+]
+}
